@@ -1,0 +1,89 @@
+/* Color variables */
+:root {
+    --greenblue: #469FA5;
+    --bluegreen: #33B684;
+    --darkgreenblue: #066368;
+    --darkbluegreen: #045e49;
+    --lightgreenblue: #92e3e8;
+    --lightbluegreen: #95e7c7;
+  }
+
+.code, .landing-bg a.code:hover {
+    color: var(--greenblue);
+}
+.froggy {
+    color: var(--bluegreen);
+}
+
+a.code:hover {
+    color: var(--darkgreenblue);
+}
+
+/* The background on the home page */
+.landing-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(52, 88, 86, 0.8)), url("images/lilypads.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+/* Styles for logo in navbar */
+.imageBox {
+    position: relative;
+    float: left;
+}
+.imageBox .hoverImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.imageBox:hover .defaultImg img {
+    visibility: hidden;
+}
+.imageBox:hover .hoverImg {
+      display: block;
+}
+
+/* Styles for Tutorials page */
+#tutorials-grid a.card {
+    border-radius: 7.5px;
+    text-decoration: none;
+}
+
+#tutorials-grid a.html.card {
+    border: solid 3px var(--darkgreenblue);
+    color: var(--darkgreenblue);
+}
+
+#tutorials-grid a.html .card-header {
+    border-bottom: solid 3px var(--darkgreenblue);
+}
+
+#tutorials-grid a.html .card-header,
+#tutorials-grid a.html.card:hover,
+#tutorials-grid a.html.card:hover .card-header {
+    background-color: var(--lightgreenblue);
+}
+
+#tutorials-grid a.css.card {
+    border: solid 3px var(--darkbluegreen);
+    color: var(--darkbluegreen);
+}
+
+#tutorials-grid a.css .card-header {
+    border-bottom: solid 3px var(--darkbluegreen);
+}
+
+#tutorials-grid a.css .card-header,
+#tutorials-grid a.css.card:hover,
+#tutorials-grid a.css.card:hover .card-header {
+    background-color: var(--lightbluegreen);
+}
+
+.custom-img {
+    border: 3px solid var(--lightgreenblue);
+}

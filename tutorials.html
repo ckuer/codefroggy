@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom styles -->
+    <link href="custom.css" rel="stylesheet">
+    <title>CodeFroggy Tutorials</title>
+    <style>
+        .filtered-tut {
+        display: none;
+        }
+        
+        .show {
+        display: block;
+        }
+    </style>
+</head>
+<body>
+    <!--TOP NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 px-2">
+        <div class="container">
+            <!--Navbar Brand-->
+            <a class="navbar-brand" href="index.html">
+                <div class="imageBox">
+                    <!--Default image logo-->
+                    <div class="defaultImg">
+                        <!--Img element hidden on hover-->
+                        <img src="images/codefroggy-small-static.png" alt="Logo" width="40" height="30" class="me-1">
+                        <!--Brand Text always shown-->
+                        <span class="text-lowercase fw-bold" style="color:#066368;">Code<span style="color:#045e49;">Froggy</span></span>
+                    </div>
+                    <!--Alt image logo, shows on hover-->
+                    <div class="hoverImg">
+                        <img src="images/codefroggy-small-anim.gif" alt="Logo" width="40" height="30">
+                    </div>
+                </div>
+              </a>
+            <!--End Navbar Brand-->
+
+          <!--Navbar hamburger button toggler-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Collapsible nav-->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-nav w-100 justify-content-lg-between">
+                <div class="d-lg-flex">
+                    <!--Nav item 1-->
+                    <div class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </div>
+                    <!--Nav item 2-->
+                    <div class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"  aria-current="page" aria-expanded="false">
+                        Tutorials
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tutorials.html">All</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html#html">HTML</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html#css">CSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-lg-flex">
+                    <!--Nav item 3-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </div>
+            </div>    
+          </div>
+        </div>
+    </nav>
+
+    <main id="tutorials">
+
+        <!--Secondary Tutorial buttons nav-->
+        <nav class="container-fluid bg-body-tertiary">
+            <div class="container py-4 py-lg-3">
+                <h1 class="mb-3 display-3 text-center text-lg-start">Tutorials</h1>
+                <div id="myBtnContainer" class="d-flex justify-content-center justify-content-lg-start align-items-center gap-3 gap-lg-2">
+                    <a id="all-btn" href="tutorials.html" role="button" class="px-4 py-2 btn btn-outline-secondary rounded-pill active" aria-pressed="true" aria-current="page">All</a>
+                    <a id="html-btn" href="tutorials.html#html" role="button" class="px-4 py-2 btn btn-outline-secondary rounded-pill">HTML</a>
+                    <a id="css-btn" href="tutorials.html#css" role="button" class="px-4 py-2 btn btn-outline-secondary rounded-pill">CSS</a>
+                </div>
+            </div>
+        </nav>
+
+        <!--Tutorials Grid-->
+        <section id="tutorials-grid" class="container py-3 px-4">
+            <!--First Row-Cols Group-->
+            <h2 class="my-2 mt-md-4 mb-md-3 text-center text-md-start">Beginning your first webpage</h2>
+            <div class="mt-1 mb-4 mb-md-5 row row-cols-2 row-cols-md-4 g-3">
+                <div class="filtered-tut html col">
+                    <a href="starter-html-tutorial.html" class="html card h-100" style="max-width: 18rem;">
+                        <div class="card-header">HTML</div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Starter HTML page structure guide</h5>
+                            <p class="card-text">Learn the basics you should start with on each HTML page.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="filtered-tut html css col">
+                    <a href="#" class="css card h-100" style="max-width: 18rem;">
+                        <div class="card-header">HTML, CSS</div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Linking CSS stylesheets</h5>
+                            <p class="card-text">Apply external CSS to your site!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="filtered-tut html col">
+                    <a href="#" class="html card h-100" style="max-width: 18rem;">
+                        <div class="card-header">HTML</div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Making your HTML semantic</h5>
+                            <p class="card-text">It's accessible and it makes your code more readable, too.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="filtered-tut css col">
+                    <a href="#" class="css card h-100" style="max-width: 18rem;">
+                        <div class="card-header">CSS</div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Responsive images</h5>
+                            <p class="card-text">Make sure your images resize themselves properly!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!--Second Row-Cols Group-->
+            <h2 class="my-2 mt-md-4 mb-md-3 text-center text-md-start">Reminders, tips, and tricks</h2>
+            <div class="mt-1 mb-4 mb-md-5 row row-cols-2 row-cols-md-4 g-3">
+                <div class="filtered-tut css html col">
+                    <a href="#" class="css card h-100" style="max-width: 18rem;">
+                        <div class="card-header">HTML, CSS</div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Class vs. id - what's the difference?</h5>
+                            <p class="card-text">Class is more general while id is specific.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="filtered-tut html css col">
+                    <a href="#" class="html card h-100" style="max-width: 18rem;">
+                        <div class="card-header">HTML, CSS</div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Useful resources for web developers</h5>
+                            <p class="card-text">Check out these sites you might find helpful in your journey.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        /* JS to apply filtering to the tutorials by category */
+
+        // Apply filter on page load
+        addEventListener("load", function(){
+            filterTuts(getFilter());
+            updateBtnClasses();
+        });
+        // Or apply filter on hash change
+        addEventListener("hashchange", function(){
+            filterTuts(getFilter()); 
+            updateBtnClasses();   
+        });
+
+
+        // Function that gets hash from url
+        function getHash() {
+            hash = window.location.hash;
+            return hash;
+        }
+
+        // Function that checks the hashes
+        function getFilter() {
+            hash = getHash();
+
+            switch(hash) {
+                case "#html":
+                    return 'html';
+                    break;
+                case "#css":
+                    return 'css';
+                    break;
+                default: 
+                    return 'all';
+            }
+        }
+
+        // Function that does the filtering
+        function filterTuts(c) {
+            var x, i;
+            x = document.getElementsByClassName("filtered-tut");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                removeClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+            }
+        }
+
+        // Function to add a class to an element
+        function addClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+
+        // Function to remove a class from an element
+        function removeClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Function to update buttons
+        function updateBtnClasses() {
+            var btnContainer = document.getElementById("myBtnContainer");
+
+            var id = getFilter() + "-btn";
+            newActiveBtn = document.getElementById(id);
+
+            var current = btnContainer.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            newActiveBtn.className += " active";
+        }
+    </script>
+</body>
+</html>

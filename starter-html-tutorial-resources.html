@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom styles -->
+    <link href="custom.css" rel="stylesheet">
+    <title>Starter HTML page structure: CodeFroggy</title>
+</head>
+<body>
+    <!--TOP NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 px-2">
+        <div class="container">
+            <!--Navbar Brand-->
+            <a class="navbar-brand" href="index.html">
+                <div class="imageBox">
+                    <!--Default image logo-->
+                    <div class="defaultImg">
+                        <!--Img element hidden on hover-->
+                        <img src="images/codefroggy-small-static.png" alt="Logo" width="40" height="30" class="me-1">
+                        <!--Brand Text always shown-->
+                        <span class="text-lowercase fw-bold" style="color:#066368;">Code<span style="color:#045e49;">Froggy</span></span>
+                    </div>
+                    <!--Alt image logo, shows on hover-->
+                    <div class="hoverImg">
+                        <img src="images/codefroggy-small-anim.gif" alt="Logo" width="40" height="30">
+                    </div>
+                </div>
+              </a>
+            <!--End Navbar Brand-->
+
+          <!--Navbar hamburger button toggler-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Collapsible nav-->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-nav w-100 justify-content-lg-between">
+                <div class="d-lg-flex">
+                    <!--Nav item 1-->
+                    <div class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </div>
+                    <!--Nav item 2-->
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tutorials
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tutorials.html">All</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html#html">HTML</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html#css">CSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-lg-flex">
+                    <!--Nav item 3-->
+                    <div class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </div>
+                </div>
+            </div>    
+          </div>
+        </div>
+    </nav>
+
+    <main id="tutorials">
+
+        <!--Secondary Tutorial buttons nav-->
+        <nav class="container-fluid bg-body-tertiary">
+            <div class="container py-4 py-lg-3">
+                <h1 class="mb-3 display-3 text-center text-lg-start">Tutorials</h1>
+                <div class="d-flex justify-content-center justify-content-lg-start align-items-center gap-3 gap-lg-2">
+                    <a href="tutorials.html" role="button" class="px-4 py-2 btn btn-outline-secondary rounded-pill">All</a>
+                    <a href="tutorials.html#html" role="button" class="px-4 py-2 btn btn-outline-secondary rounded-pill">HTML</a>
+                    <a href="tutorials.html#css" role="button" class="px-4 py-2 btn btn-outline-secondary rounded-pill">CSS</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Tutorial -->
+        <section id="tutorial" class="container p-4 mt-4" style="max-width: 900px;">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a class="text-decoration-none code" href="tutorials.html">Tutorials</a></li>
+                  <li class="breadcrumb-item"><a class="text-decoration-none code" href="tutorials.html#html">HTML</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Starter HTML page structure guide</li>
+                </ol>
+              </nav>
+              
+            <a href="#" class="text-center text-lg-start text-decoration-none link-dark"><h2 class="display-5 fw-bold">Starter HTML page structure guide</h2></a>
+            <!-- Tabs for this tutorial -->
+            <ul class="nav nav-tabs pt-4">
+                <li class="nav-item">
+                    <a class="nav-link link-dark" href="starter-html-tutorial.html">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active link-dark" aria-current="page" href="starter-html-tutorial.html">Extra Resources</a>
+                </li>
+            </ul>
+            <div class="pt-5 pb-2">
+                <h3 class="px-5 py-3">Extra Resources for this Tutorial</h3>
+                <p class="px-5">Below are some relevant resources you might find helpful.</p>
+                <ul class="ms-3 px-5 fs-5">
+                    <li><a class="text-decoration-none code" target="_blank" href="https://code.visualstudio.com/">Visual Studio Code official website</a></li>
+                    <li><a class="text-decoration-none code" target="_blank" href="https://www.w3schools.com/tags/default.asp">W3Schools HTML Element Reference</a></li>
+                </ul>            
+            </div>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>
